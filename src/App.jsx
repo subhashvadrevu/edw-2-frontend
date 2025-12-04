@@ -1,11 +1,10 @@
-import ThemeProvider from './theme';
-import { Typography } from '@mui/material';
-const App = ()=>{
+import ThemeProvider from "./theme";
+import AppRouter from "./router/AppRouter";
+
+export default function App() {
   return (
     <ThemeProvider>
-       <Typography variant='h1'>Hello</Typography>
+      <AppRouter />
     </ThemeProvider>
   );
 }
-
-export default App

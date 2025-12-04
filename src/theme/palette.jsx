@@ -136,14 +136,21 @@ const palette = {
     externalwarning: EXTERNALWARNING,
     gradient: primary_gradient,
     background: {
-        paper: '#fff',
-        default: GREY[100],
+        paper: '#ffffff',     // card backgrounds remain white
+        default: '#0E1320',   // dark dashboard background
         neutral: GREY[200],
+        elevated: '#1A2032',  // optional: for dark cards if future screens need it
     },
     text: {
         primary: '#393A3D',
         secondary: GREY[600],
         disabled: GREY[500],
+    },
+    heading:{
+        primary: '#ffffff',
+    },
+    xp:{
+        primary: '#EAB308',
     },
 
 };
