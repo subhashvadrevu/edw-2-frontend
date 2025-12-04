@@ -9,7 +9,7 @@
       "Arrays",
       "Hash Table"
     ],
-    "status": "unsolved"
+    "status": "solved"
   },
   {
     "id": 2,
@@ -20,7 +20,7 @@
     "topics": [
       "Binary Search"
     ],
-    "status": "unsolved"
+    "status": "solved"
   },
   {
     "id": 3,
@@ -42,7 +42,7 @@
     "topics": [
       "String"
     ],
-    "status": "solved"
+    "status": "unsolved"
   },
   {
     "id": 5,
@@ -53,7 +53,7 @@
     "topics": [
       "Math"
     ],
-    "status": "solved"
+    "status": "unsolved"
   },
   {
     "id": 6,

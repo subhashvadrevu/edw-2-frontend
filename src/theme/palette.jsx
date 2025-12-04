@@ -152,6 +152,20 @@ const palette = {
     xp:{
         primary: '#EAB308',
     },
+    difficulty_tags:{
+        easy: {
+            background: 'rgba(34, 197, 94, 0.15)',
+            text: '#22c55e',
+        },
+        medium:{
+            background: 'rgba(245, 158, 11, 0.15)',
+            text: '#f59e0b',
+        },
+        hard:{
+            background: 'rgba(239, 68, 68, 0.15)',
+            text: '#ef4444',
+        },
+    },
 
 };
 

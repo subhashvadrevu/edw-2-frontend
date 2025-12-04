@@ -29,7 +29,7 @@ export default function Dashboard() {
           <ProblemTable />
         </Box>
 
-        {/* RIGHT SIDEBAR */}
+        {/* RIGHT COLUMN */}
         <Box sx={{ flex: 1.5, display: "flex", flexDirection: "column", gap: 3 }}>
           <ProgressCard />
           <LeaderboardCard />

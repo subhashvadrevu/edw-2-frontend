@@ -7,6 +7,7 @@ import {
   Button,
   Chip,
   Skeleton,
+  useTheme,
 } from '@mui/material';
 import {
   PlayArrow as PlayArrowIcon,
@@ -19,7 +20,7 @@ import axios from 'axios';
 function DailyChallenge() {
   const [challenge, setChallenge] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const theme = useTheme();
   useEffect(() => {
     const fetchDailyChallenge = async () => {
       try {
@@ -39,11 +40,11 @@ function DailyChallenge() {
     const diff = (difficulty || 'medium').toLowerCase();
     switch (diff) {
       case 'easy':
-        return { bg: 'rgba(34, 197, 94, 0.15)', color: '#22c55e' };
+        return { bg: theme.palette.difficulty_tags.easy.background, color: theme.palette.difficulty_tags.easy.text };
       case 'medium':
-        return { bg: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b' };
+        return { bg: theme.palette.difficulty_tags.medium.background, color: theme.palette.difficulty_tags.medium.text};
       case 'hard':
-        return { bg: 'rgba(239, 68, 68, 0.15)', color: '#ef4444' };
+        return { bg: theme.palette.difficulty_tags.hard.background, color: theme.palette.difficulty_tags.hard.text };
       default:
         return { bg: 'rgba(148, 163, 184, 0.15)', color: '#94a3b8' };
     }
@@ -97,7 +98,7 @@ function DailyChallenge() {
             Daily Challenge
           </Typography>
           <Chip
-            label={challenge?.difficulty || 'Medium'}
+            label={challenge?.difficulty}
             size="small"
             sx={{
               backgroundColor: difficultyStyle.bg,
@@ -166,13 +167,13 @@ function DailyChallenge() {
               </Box>
             </>
           )}
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: '#fbbf24' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: theme.palette.xp.primary}}>
           <Chip
-          icon={<BoltIcon sx={{ fontSize: 16, color: '#fbbf24 !important' }} />}
+          icon={<BoltIcon sx={{ fontSize: 16, color: `${theme.palette.xp.primary} !important` }} />}
           label="150"
           sx={{
             backgroundColor: 'rgba(0,0,0,0)',
-            border: `1px solid #EAB308`,
+            border: `1px solid ${theme.palette.xp.primary}`,
             color: '#EAB308',
             fontWeight: 600,
             fontSize: '0.875rem',
@@ -189,7 +190,7 @@ function DailyChallenge() {
             startIcon={<PlayArrowIcon />}
             sx={{
               backgroundColor: 'primary.main',
-              color: 'white',
+              color: theme.palette.common.white,
               px: 3,
               '&:hover': {
                 backgroundColor: 'primary.dark',
